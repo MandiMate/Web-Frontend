@@ -1,0 +1,165 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.split-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-panel {
+    flex: 1;
+    background-image: url("../assets/left_background_image.jpg");
+    background-color: #2D6A4F;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-overlay {
+    display: none;
+}
+
+.left-content {
+    max-width: 400px;
+    z-index: 2;
+    text-align: center;
+}
+
+.left-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.left-content p {
+    font-size: 18px;
+    opacity: 0.9;
+    line-height: 1.6;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.right-panel {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+    color: #2D6A4F;
+    font-weight: 600;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #212529;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #2D6A4F;
+    box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.2);
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.login-button {
+    width: 100%;
+    background-color: #2D6A4F;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #245d3e;
+}
+
+.form-links {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-links a {
+    color: #2D6A4F;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}
+
+.bottom-link {
+    margin-top: -5px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .right-panel {
+        width: 100%;
+        min-height: 100vh;
+        /* Yeh add karo to vertically center ho */
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+
+    .form-box {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
