@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,6 +29,19 @@ const Login = () => {
             console.log(err);
         }
     };
+
+    useEffect(() => {
+
+        let token = localStorage.getItem("token");
+
+        if (token) {
+            navigate("/dashboard")
+        }
+        else {
+            navigate("/")
+        }
+    }, []);
+
 
     return (
         <div className="split-container login-page">
