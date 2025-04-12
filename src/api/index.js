@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    // baseURL: "https://mandimatebackend.vercel.app/",
-    baseURL: "http://localhost:7000",
+    baseURL: "https://mandimatebackend.vercel.app",
     timeout: 5000,
     headers: {
         "Content-Type": "application/json"
