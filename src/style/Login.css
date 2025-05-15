@@ -60,8 +60,22 @@
     max-width: 400px;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 50px;
+    /* apni requirement ke mutabiq adjust karen */
+    height: auto;
+    object-fit: contain;
+}
+
+
 .form-box h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #2D6A4F;
     font-weight: 600;
     text-align: center;
@@ -162,4 +176,21 @@
         max-width: 400px;
         margin: 0 auto;
     }
+}
+
+/* Role Styling */
+.input-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+    color: #212529;
+}
+
+.input-group select:focus {
+    border-color: #2D6A4F;
+    box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.2);
 }

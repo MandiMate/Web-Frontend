@@ -1,0 +1,55 @@
+.stat-card {
+  box-shadow: 0 2px 8px rgb(22 163 74 / 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgb(22 163 74 / 0.3);
+}
+
+.icon {
+  font-size: 32px;
+  color: white;
+  flex-shrink: 0;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 14px;
+  color: #166534; /* dark green */
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-size: 28px;
+  margin: 0;
+  color: #14532d; /* darker green */
+}
+
+.delta {
+  font-size: 14px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.delta.positive {
+  color: #22c55e; /* light green */
+}
+
+.delta.negative {
+  color: #dc2626; /* red */
+}

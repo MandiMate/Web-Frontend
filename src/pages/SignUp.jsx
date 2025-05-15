@@ -72,6 +72,15 @@ const Signup = () => {
                             />
                             {errors.password && <p className="error">{errors.password.message}</p>}
                         </div>
+                        <div className="input-group">
+                            <label>Select Role</label>
+                            <select {...register('role', { required: 'Role is required' })}>
+                                <option value="">Select Role</option>
+                                <option value={2}>Agent</option>
+                                <option value={3}>Landlord</option>
+                            </select>
+                            {errors.role && <p className="error">{errors.role.message}</p>}
+                        </div>
 
                         <button type="submit" className="login-button">Sign Up</button>
 
