@@ -12,7 +12,8 @@
 
 .left-panel {
     flex: 1;
-    background-image: url("../assets/left_background_image.jpg");
+    background-image: url("../assets/left_background_image.png");
+    background-size: cover;
     background-color: #2D6A4F;
     color: white;
     display: flex;
@@ -113,7 +114,7 @@
 
 .login-button {
     width: 100%;
-    background-color: #2D6A4F;
+    background-color: #00703C;
     color: white;
     padding: 10px;
     border: none;
@@ -125,7 +126,7 @@
 }
 
 .login-button:hover {
-    background-color: #245d3e;
+    background-color: #1a8855;
 }
 
 .form-links {

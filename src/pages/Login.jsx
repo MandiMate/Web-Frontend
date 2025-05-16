@@ -35,7 +35,7 @@ const Login = () => {
                     } else if (role == 3) {
                         navigate("/landlord-dashboard");
                     } else {
-                        navigate("/");
+                        navigate("/login");
                     }
                 }
             }, 3000);

@@ -1,0 +1,214 @@
+/* SeasonOverview.css */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+.season-container {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    color: #212529;
+}
+
+.season-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.season-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.season-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.add-new-list {
+    background-color: #2D6A4F;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-new-list:hover{
+    background-color: #3d966d;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filter-btn,
+.dropdown,
+.reset-filter {
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.reset-filter {
+    color: #dc3545;
+    border-color: transparent;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.order-table thead {
+    background-color: #f1f3f5;
+}
+
+.order-table th,
+.order-table td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.status {
+    padding: 0.35rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+}
+
+.status.completed {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.status.processing {
+    background-color: #e0cffc;
+    color: #5f27cd;
+}
+
+.status.rejected {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.actions i {
+    font-size: 1rem;
+    color: #495057;
+    cursor: pointer;
+}
+
+.actions i:hover {
+    color: #212529;
+}
+
+.end-season-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.end-season {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .season-header,
+    .filter-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .order-table th,
+    .order-table td {
+        padding: 0.75rem;
+    }
+}
+
+.footer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.end-season {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.pagination-controls {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pagination-controls button {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pagination-controls button:hover {
+    background-color: #e9ecef;
+}

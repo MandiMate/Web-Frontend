@@ -1,11 +1,18 @@
 import React from 'react';
-import Sidebar from '../components/Sidebar';
+import Sidebar from '../components/SideBar.jsx';
 import Navbar from '../components/Navbar';
 import StatCard from '../components/StatCard';
-import { FaShoppingCart, FaBoxes, FaDollarSign, FaClipboardList } from 'react-icons/fa';
+import { FaShoppingCart, FaBoxes, FaDollarSign, FaClipboardList, FaRegCalendarAlt } from 'react-icons/fa';
 import '../style/Dashboard.css';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+
+    let navigate = useNavigate()
+
+    function goSeasonOverview() {
+        navigate("/season-overview")
+    }
     return (
         <>
             <Sidebar />
@@ -13,7 +20,7 @@ const Dashboard = () => {
                 <Navbar />
                 <div className="dashboard-header">
                     <h1>Dashboard</h1>
-                    <button className="btn-new-season">+ New Season</button>
+                    <button className="btn-new-season" onClick={goSeasonOverview}><span style={{marginRight:"5px"}}><FaRegCalendarAlt /></span> New Season</button>
                 </div>
 
                 <div className="cards-container">

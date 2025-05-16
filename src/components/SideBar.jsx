@@ -2,14 +2,19 @@ import React from 'react';
 import '../style/SideBar.css';
 import logo from "../assets/LOGO.png"
 import { FaChartLine, FaLeaf, FaTruck, FaBoxOpen, FaFileAlt, FaCog, FaSignOutAlt, FaPowerOff } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { MdCloudDone } from 'react-icons/md';
+import { AiFillProduct } from 'react-icons/ai';
 
 const Sidebar = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const currentPath = location.pathname;
+
 
     const handleLogout = () => {
         localStorage.clear();
-        navigate("/");
+        navigate("/login");
     };
 
     return (
@@ -18,11 +23,11 @@ const Sidebar = () => {
                 <img src={logo} className="sidebar-logo" />
             </div>
             <ul className="sidebar-menu">
-                <li className="menu-item active"><FaChartLine /> Dashboard</li>
-                <li className="menu-item"><FaLeaf /> Seasons</li>
-                <li className="menu-item"><FaTruck /> Purchases</li>
-                <li className="menu-item"><FaBoxOpen /> Inventory</li>
-                <li className="menu-item"><FaFileAlt /> Reports</li>
+                <Link to={"/agent-dashboard"} className={`menu-item ${currentPath == "/agent-dashboard" ? "active" : ""}`}><FaChartLine /> Dashboard</Link>
+                <Link to={"/season-overview"} className={`menu-item ${currentPath == "/season-overview" ? "active" : ""}`}><MdCloudDone /> Season Overview</Link>
+                <Link to={"/Products"} className={`menu-item ${currentPath == "/Products" ? "active" : ""}`}><AiFillProduct /> Products</Link>
+                <Link to={"/Inventory"} className={`menu-item ${currentPath == "/Inventory" ? "active" : ""}`}><FaBoxOpen /> Inventory</Link>
+                <Link to={"/Reports"} className={`menu-item ${currentPath == "/Reports" ? "active" : ""}`}><FaFileAlt /> Reports</Link>
             </ul>
             <div className="sidebar-bottom">
                 <div className="menu-item"><FaCog /> Settings</div>

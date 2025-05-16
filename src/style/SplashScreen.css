@@ -1,0 +1,33 @@
+/* Fullscreen background image + centered logo */
+.splash-screen {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    background-image: url('../assets/Splash.png');
+    /* Your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.splash-logo {
+    width: 300px;
+    height: auto;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
